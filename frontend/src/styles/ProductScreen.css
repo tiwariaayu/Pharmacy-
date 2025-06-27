@@ -1,0 +1,147 @@
+.productscreen {
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.productscreen__left {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.left__image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.left__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left__info {
+  flex: 1;
+  padding: 1rem;
+}
+
+.left__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info__label {
+  font-weight: 600;
+  color: #444;
+}
+
+.productscreen__right {
+  flex: 1;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.right__info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right__info p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.right__info p:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.right__info select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: 1rem;
+}
+
+.right__info button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.right__info button:hover:not(.disabled) {
+  background: #1976D2;
+}
+
+.right__info button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #f44336;
+}
+
+.no-product {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .productscreen {
+    padding: 1rem;
+  }
+
+  .productscreen__left {
+    flex-direction: column;
+  }
+
+  .left__image {
+    max-width: 100%;
+  }
+
+  .productscreen__right {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
